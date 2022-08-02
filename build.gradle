@@ -1,6 +1,6 @@
 buildscript{
     ext{
-        springbootVersion = '2.1.7.RELEASE'
+        springbootVersion = '2.4.1'
     }
     repositories {
         mavenCentral()
@@ -12,21 +12,32 @@ buildscript{
 
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.4.1' // RELEASE 삭제
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 }
 
 
 group 'org.example'
-version '1.0-SNAPSHOT'
+version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
+test {
+    useJUnitPlatform()
+}
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.2'
-    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.7.2'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
 }
 
 test {
