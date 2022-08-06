@@ -32,6 +32,7 @@ deploy:
     bucket: seung-springboot-webservice
     region: ap-northeast-2
     acl: private
+    skip_cleanup: true
     local_dir: deploy
 
   - provider: codedeploy
