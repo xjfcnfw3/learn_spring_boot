@@ -13,5 +13,5 @@ files:
   hooks:
     ApplicationStart:
       - location: deploy.sh
-        timeout: 12000
+        timeout: 60
         runas: ec2-user
