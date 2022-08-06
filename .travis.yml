@@ -29,7 +29,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: seung-springboot-webservice
+    bucket: test-spring-boot
     region: ap-northeast-2
     acl: private
     skip_cleanup: true
@@ -38,11 +38,11 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: seung-springboot-webservice
-    key: seung-springboot-webservice.zip
+    bucket: test-spring-boot
+    key: test-spring-boot.zip
     bundle_type: zip
-    application: seung-springboot-webservice
-    deployment_group: seung-springboot-webservice-group
+    application: test-spring-boot
+    deployment_group: test-spring-boot-group
     region: ap-northeast-2
     wait-until-deployed: true
 
