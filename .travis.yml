@@ -39,7 +39,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: test-spring-boot
-    key: test-spring-boot.zip
+    key: learn_spring_boot.zip
     bundle_type: zip
     application: test-spring-boot
     deployment_group: test-spring-boot-group
