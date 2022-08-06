@@ -1,7 +1,7 @@
   #!/bin/bash
 
   REPOSITORY=/home/ec2-user/app/step2
-  PROJECT_NAME=Spring_BootPJ_booboo
+  PROJECT_NAME=learn_spring_boot
 
   echo "> Build 파일 복사"
 
